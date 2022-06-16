@@ -51,7 +51,6 @@ function App() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
-      <div className={styles.rate}>{data.result}</div>
     </div>
   );
 }
