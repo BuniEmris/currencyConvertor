@@ -12,6 +12,6 @@ export const getResource = async (addr: any) => {
     const data = await res.json();
     return data;
   } catch (err) {
-    return 123;
+    return console.log(err);
   }
 };
