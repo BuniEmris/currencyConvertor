@@ -2,22 +2,23 @@ import React, { useEffect, useState } from "react";
 import { getResource } from "../../utils/apiClient";
 import styles from "./Header.module.css";
 export default function Header() {
-  const [usdvalue, setUsdvalue] = useState(0);
-  const [eurvalue, setEurvalue] = useState(0);
+  const [usdvalue, setUsdvalue] = useState<any>([]);
+  const [eurvalue, setEurvalue] = useState<any>([]);
   useEffect(() => {
-    getResource("to=USD&from=UAH&amount=1").then((response) =>
-      setUsdvalue(response.result),
+    getResource("to=UAH&from=USD&amount=1").then((response) =>
+      setUsdvalue(response),
     );
-    getResource("to=EUR&from=UAH&amount=1").then((response) =>
-      setEurvalue(response.result),
+    getResource("to=UAH&from=EUR&amount=1").then((response) =>
+      setEurvalue(response),
     );
   }, []);
+  console.log(usdvalue, "va+++ ", eurvalue);
 
   return (
     <div className={styles.container}>
       <h3>Convert Ukrainian Hryvni to US Dollars and EURO</h3>
-      <p>Today 1 USD is UKR {usdvalue}</p>
-      <p>Today 1 EURO is UKR {eurvalue}</p>
+      <p>Today 1 USD is UKR {usdvalue?.result}</p>
+      <p>Today 1 EURO is UKR {eurvalue?.result}</p>
     </div>
   );
 }

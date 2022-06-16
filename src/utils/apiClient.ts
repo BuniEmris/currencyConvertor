@@ -1,4 +1,4 @@
-const MY_KEY = "spW8vqxcdrfrgxk364xVBjQR33VAVo8V";
+const MY_KEY = "Jkxdz4nyrSNYDhZBiSAxWoWooU42z2uI";
 const API_URL = "https://api.apilayer.com/exchangerates_data/convert?";
 export const getResource = async (addr: any) => {
   try {
