@@ -1,0 +1,18 @@
+.container {
+  margin-top: 20rem;
+}
+.inputBox {
+  border: 0.25rem solid #fff;
+  border-radius: 0.3em;
+  padding: 10rem;
+  width: 200rem;
+  margin-right: 20rem;
+  font-size: 16rem;
+}
+.selectorBox {
+  width: 100rem;
+  padding: 10rem;
+  border: 0.25rem solid #fff;
+  border-radius: 0.3em;
+  font-size: 16rem;
+}
