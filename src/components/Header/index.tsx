@@ -4,14 +4,14 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [usdvalue, setUsdvalue] = useState<any>([]);
   const [eurvalue, setEurvalue] = useState<any>([]);
-  useEffect(() => {
-    getResource("to=UAH&from=USD&amount=1").then((response) =>
-      setUsdvalue(response),
-    );
-    getResource("to=UAH&from=EUR&amount=1").then((response) =>
-      setEurvalue(response),
-    );
-  }, []);
+  // useEffect(() => {
+  //   getResource("to=UAH&from=USD&amount=1").then((response) =>
+  //     setUsdvalue(response),
+  //   );
+  //   getResource("to=UAH&from=EUR&amount=1").then((response) =>
+  //     setEurvalue(response),
+  //   );
+  // }, []);
   console.log(usdvalue, "va+++ ", eurvalue);
 
   return (
